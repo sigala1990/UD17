@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "626bf874807a2c2072059fa9"
+  },
+  "DNI": "A1234567",
+  "nombreApellidos": "Veronika Polonchak"
+},{
+  "_id": {
+    "$oid": "626bf8a2807a2c2072059faa"
+  },
+  "DNI": "B1234567",
+  "nombreApellidos": "Isidre Planas"
+},{
+  "_id": {
+    "$oid": "626bf8bc807a2c2072059fab"
+  },
+  "DNI": "C1234567",
+  "nombreApellidos": "Adria Queralt"
+}]

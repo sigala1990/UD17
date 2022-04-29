@@ -1,0 +1,183 @@
+db.createCollection("facultad")
+{ ok: 1 }
+db.createCollection("equipos")
+{ ok: 1 }
+db.createCollection("investigadores")
+{ ok: 1 }
+db.createCollection("reserva")
+{ ok: 1 }
+show collections
+equipos
+facultad
+investigadores
+reserva
+db.facultad.insertOne({"nombre": "facultad de biología"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf6bf807a2c2072059fa3") }
+db.facultad.insertOne({"nombre": "facultad de filología"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf6fb807a2c2072059fa4") }
+db.facultad.insertOne({"nombre": "facultad de filosofía"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf70a807a2c2072059fa5") }
+db.facultad.find()
+{ _id: ObjectId("626bf6bf807a2c2072059fa3"),
+  nombre: 'facultad de biología' }
+{ _id: ObjectId("626bf6fb807a2c2072059fa4"),
+  nombre: 'facultad de filología' }
+{ _id: ObjectId("626bf70a807a2c2072059fa5"),
+  nombre: 'facultad de filosofía' }
+db.equipos.insertOne({"nombre": "equipo1"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf792807a2c2072059fa6") }
+db.equipos.insertOne({"nombre": "equipo2"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf79f807a2c2072059fa7") }
+db.equipos.insertOne({"nombre": "equipo3"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf7a8807a2c2072059fa8") }
+db.equipos.find()
+{ _id: ObjectId("626bf792807a2c2072059fa6"), nombre: 'equipo1' }
+{ _id: ObjectId("626bf79f807a2c2072059fa7"), nombre: 'equipo2' }
+{ _id: ObjectId("626bf7a8807a2c2072059fa8"), nombre: 'equipo3' }
+db.investigadores.insertOne({"DNI": "A1234567", "nombreApellidos": "Veronika Polonchak"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf874807a2c2072059fa9") }
+db.investigadores.insertOne({"DNI": "B1234567", "nombreApellidos": "Isidre Planas"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf8a2807a2c2072059faa") }
+db.investigadores.insertOne({"DNI": "C1234567", "nombreApellidos": "Adria Queralt"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bf8bc807a2c2072059fab") }
+db.investigadores.find()
+{ _id: ObjectId("626bf874807a2c2072059fa9"),
+  DNI: 'A1234567',
+  nombreApellidos: 'Veronika Polonchak' }
+{ _id: ObjectId("626bf8a2807a2c2072059faa"),
+  DNI: 'B1234567',
+  nombreApellidos: 'Isidre Planas' }
+{ _id: ObjectId("626bf8bc807a2c2072059fab"),
+  DNI: 'C1234567',
+  nombreApellidos: 'Adria Queralt' }
+db.reserva.insertOne({"comienzo": new Date ("<2022-04-29T09:00:00>") , "fin": new Date("<2022-04-29T11:00:00>")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bfd71807a2c2072059fac") }
+db.reserva.insertOne({"comienzo": new Date ("<2022-04-29T11:00:00>") , "fin": new Date("<2022-04-29T13:00:00>")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bfe07807a2c2072059fad") }
+db.reserva.insertOne({"comienzo": new Date ("<2022-04-29T15:00:00>") , "fin": new Date("<2022-04-29T17:00:00>")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bfe26807a2c2072059fae") }
+db.reserva.find()
+{ _id: ObjectId("626bfd71807a2c2072059fac"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe07807a2c2072059fad"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe26807a2c2072059fae"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+db.reserva.insertOne({"comienzo": new Date ("2022-04-29T09:00:00") , "fin": new Date("2022-04-29T11:00:00")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bff13807a2c2072059faf") }
+db.reserva.find()
+{ _id: ObjectId("626bfd71807a2c2072059fac"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe07807a2c2072059fad"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe26807a2c2072059fae"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bff13807a2c2072059faf"),
+  comienzo: 2022-04-29T07:00:00.000Z,
+  fin: 2022-04-29T09:00:00.000Z }
+db.reserva.insertOne({"comienzo": new Date ("<2022-04-29T11:00:00>") , "fin": new Date("<2022-04-29T13:00:00>")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bffa3807a2c2072059fb0") }
+db.reserva.insertOne({"comienzo": new Date ("<2022-04-29T15:00:00>") , "fin": new Date("<2022-04-29T17:00:00>")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bffb2807a2c2072059fb1") }
+db.reserva.find()
+{ _id: ObjectId("626bfd71807a2c2072059fac"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe07807a2c2072059fad"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe26807a2c2072059fae"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bff13807a2c2072059faf"),
+  comienzo: 2022-04-29T07:00:00.000Z,
+  fin: 2022-04-29T09:00:00.000Z }
+{ _id: ObjectId("626bffa3807a2c2072059fb0"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bffb2807a2c2072059fb1"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+db.reserva.insertOne({"comienzo": new Date ("2022-04-29T11:00:00") , "fin": new Date("2022-04-29T13:00:00")})
+{ acknowledged: true,
+  insertedId: ObjectId("626bfffa807a2c2072059fb2") }
+db.reserva.insertOne({"comienzo": new Date ("2022-04-29T15:00:00") , "fin": new Date("2022-04-29T17:00:00")})
+{ acknowledged: true,
+  insertedId: ObjectId("626c0016807a2c2072059fb3") }
+db.reserva.find()
+{ _id: ObjectId("626bfd71807a2c2072059fac"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe07807a2c2072059fad"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfe26807a2c2072059fae"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bff13807a2c2072059faf"),
+  comienzo: 2022-04-29T07:00:00.000Z,
+  fin: 2022-04-29T09:00:00.000Z }
+{ _id: ObjectId("626bffa3807a2c2072059fb0"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bffb2807a2c2072059fb1"),
+  comienzo: 1970-01-01T00:00:00.000Z,
+  fin: 1970-01-01T00:00:00.000Z }
+{ _id: ObjectId("626bfffa807a2c2072059fb2"),
+  comienzo: 2022-04-29T09:00:00.000Z,
+  fin: 2022-04-29T11:00:00.000Z }
+{ _id: ObjectId("626c0016807a2c2072059fb3"),
+  comienzo: 2022-04-29T13:00:00.000Z,
+  fin: 2022-04-29T15:00:00.000Z }
+db.reserva.deleteOne({db.reserva.insertOne({ _id: ObjectId("626bfd71807a2c2072059fac")})
+SyntaxError: Unexpected token, expected "," (1:24)
+
+> 1 | db.reserva.deleteOne({db.reserva.insertOne({ _id: ObjectId("626bfd71807a2c2072059fac")})
+    |                         ^
+  2 |
+db.reserva.deleteOne({ _id: ObjectId("626bfd71807a2c2072059fac")})
+{ acknowledged: true, deletedCount: 1 }
+db.reserva.deleteOne({_id: ObjectId("626bfe07807a2c2072059fad")})
+{ acknowledged: true, deletedCount: 1 }
+db.reserva.deleteOne({_id: ObjectId("626bfe26807a2c2072059fae")})
+{ acknowledged: true, deletedCount: 1 }
+db.reserva.deleteOne({_id: ObjectId("626bffa3807a2c2072059fb0")})
+{ acknowledged: true, deletedCount: 1 }
+db.reserva.deleteOne({ _id: ObjectId("626bffb2807a2c2072059fb1")})
+{ acknowledged: true, deletedCount: 1 }
+db.reserva.find()
+{ _id: ObjectId("626bff13807a2c2072059faf"),
+  comienzo: 2022-04-29T07:00:00.000Z,
+  fin: 2022-04-29T09:00:00.000Z }
+{ _id: ObjectId("626bfffa807a2c2072059fb2"),
+  comienzo: 2022-04-29T09:00:00.000Z,
+  fin: 2022-04-29T11:00:00.000Z }
+{ _id: ObjectId("626c0016807a2c2072059fb3"),
+  comienzo: 2022-04-29T13:00:00.000Z,
+  fin: 2022-04-29T15:00:00.000Z }
+show collections
+equipos
+facultad
+investigadores
+reserva

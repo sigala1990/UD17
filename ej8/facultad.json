@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "626bf6bf807a2c2072059fa3"
+  },
+  "nombre": "facultad de biología"
+},{
+  "_id": {
+    "$oid": "626bf6fb807a2c2072059fa4"
+  },
+  "nombre": "facultad de filología"
+},{
+  "_id": {
+    "$oid": "626bf70a807a2c2072059fa5"
+  },
+  "nombre": "facultad de filosofía"
+}]

@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "626bff13807a2c2072059faf"
+  },
+  "comienzo": {
+    "$date": {
+      "$numberLong": "1651215600000"
+    }
+  },
+  "fin": {
+    "$date": {
+      "$numberLong": "1651222800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "626bfffa807a2c2072059fb2"
+  },
+  "comienzo": {
+    "$date": {
+      "$numberLong": "1651222800000"
+    }
+  },
+  "fin": {
+    "$date": {
+      "$numberLong": "1651230000000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "626c0016807a2c2072059fb3"
+  },
+  "comienzo": {
+    "$date": {
+      "$numberLong": "1651237200000"
+    }
+  },
+  "fin": {
+    "$date": {
+      "$numberLong": "1651244400000"
+    }
+  }
+}]
