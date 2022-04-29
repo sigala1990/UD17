@@ -1,0 +1,96 @@
+show databases
+admin      164 kB
+config    77.8 kB
+local     73.7 kB
+ud17_ej2   147 kB
+use ud17_ej6
+'switched to db ud17_ej6'
+db.createCollection("Proveedores")
+{ ok: 1 }
+db.createCollection("Piezas")
+{ ok: 1 }
+show collections
+Piezas
+Proveedores
+db.proveedores.insertOne({"id": "A123", "nombre": "Veronika"})
+{ acknowledged: true,
+  insertedId: ObjectId("626b11e4807a2c2072059f94") }
+db.proveedores.insertOne({"id": "B123", "nombre": "Isidre"})
+{ acknowledged: true,
+  insertedId: ObjectId("626b130b807a2c2072059f95") }
+db.proveedores.insertOne({"id": "C123", "nombre": "Adria"})
+{ acknowledged: true,
+  insertedId: ObjectId("626b134d807a2c2072059f96") }
+db.proveedores.find()
+{ _id: ObjectId("626b11e4807a2c2072059f94"),
+  id: 'A123',
+  nombre: 'Veronika' }
+{ _id: ObjectId("626b130b807a2c2072059f95"),
+  id: 'B123',
+  nombre: 'Isidre' }
+{ _id: ObjectId("626b134d807a2c2072059f96"),
+  id: 'C123',
+  nombre: 'Adria' }
+db.piezas.insertOne({"id": "A123", "nombre": "Procesador"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bd72e807a2c2072059f97") }
+db.piezas.insertOne({"id": "B123", "nombre": "Ventilador"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bd74f807a2c2072059f98") }
+db.piezas.insertOne({"id": "A123", "nombre": "Memoria RAM"})
+{ acknowledged: true,
+  insertedId: ObjectId("626bd772807a2c2072059f99") }
+db.piezas.find()
+{ _id: ObjectId("626bd72e807a2c2072059f97"),
+  id: 'A123',
+  nombre: 'Procesador' }
+{ _id: ObjectId("626bd74f807a2c2072059f98"),
+  id: 'B123',
+  nombre: 'Ventilador' }
+{ _id: ObjectId("626bd772807a2c2072059f99"),
+  id: 'A123',
+  nombre: 'Memoria RAM' }
+db.createCollection("Suministra")
+{ ok: 1 }
+show collections
+piezas
+Piezas
+proveedores
+Suministra
+db.Piezas.drop()
+true
+show collections
+piezas
+proveedores
+Suministra
+db.Suministra.drop()
+true
+db.createCollection("suministra")
+{ ok: 1 }
+db.piezas.find()
+{ _id: ObjectId("626bd72e807a2c2072059f97"),
+  id: 'A123',
+  nombre: 'Procesador' }
+{ _id: ObjectId("626bd74f807a2c2072059f98"),
+  id: 'B123',
+  nombre: 'Ventilador' }
+{ _id: ObjectId("626bd772807a2c2072059f99"),
+  id: 'A123',
+  nombre: 'Memoria RAM' }
+db.suministra.insertOne({"precio": 10})
+{ acknowledged: true,
+  insertedId: ObjectId("626beddc807a2c2072059f9a") }
+db.suministra.insertOne({"precio": 20})
+{ acknowledged: true,
+  insertedId: ObjectId("626bee06807a2c2072059f9b") }
+db.suministra.insertOne({"precio": 30})
+{ acknowledged: true,
+  insertedId: ObjectId("626bee17807a2c2072059f9c") }
+db.suministra.find()
+{ _id: ObjectId("626beddc807a2c2072059f9a"), precio: 10 }
+{ _id: ObjectId("626bee06807a2c2072059f9b"), precio: 20 }
+{ _id: ObjectId("626bee17807a2c2072059f9c"), precio: 30 }
+show collections
+piezas
+proveedores
+suministra

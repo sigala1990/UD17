@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "626bd72e807a2c2072059f97"
+  },
+  "id": "A123",
+  "nombre": "Procesador"
+},{
+  "_id": {
+    "$oid": "626bd74f807a2c2072059f98"
+  },
+  "id": "B123",
+  "nombre": "Ventilador"
+},{
+  "_id": {
+    "$oid": "626bd772807a2c2072059f99"
+  },
+  "id": "A123",
+  "nombre": "Memoria RAM"
+}]
