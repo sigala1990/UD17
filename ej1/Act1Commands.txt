@@ -1,0 +1,71 @@
+use UD17act1
+show dbs
+
+db.createCollection("fabricantes")
+{ ok: 1 }
+db.createCollection("articulos")
+{ ok: 1 }
+
+
+show collections
+articulos
+fabricantes
+
+db.fabricantes.insertOne({codigo:1,nombre:"pepe"})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7b316bf3875389d119e3") }
+db.fabricantes.insertOne({codigo:2,nombre:"pig"})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7b3c6bf3875389d119e4") }
+db.fabricantes.insertOne({codigo:3,nombre:"turtle"})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7b426bf3875389d119e5") }
+
+db.fabricantes.find()
+{ _id: ObjectId("626d7b316bf3875389d119e3"),
+  codigo: 1,
+  nombre: 'pepe' }
+{ _id: ObjectId("626d7b3c6bf3875389d119e4"),
+  codigo: 2,
+  nombre: 'pig' }
+{ _id: ObjectId("626d7b426bf3875389d119e5"),
+  codigo: 3,
+  nombre: 'turtle' }
+
+db.fabricantes.find({codigo:3})
+{ _id: ObjectId("626d7b426bf3875389d119e5"),
+  codigo: 3,
+  nombre: 'turtle' }
+
+db.articulos.insertOne({codigo:1,nombre:"tomate", precio:100})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7c116bf3875389d119e6") }
+db.articulos.insertOne({codigo:2,nombre:"banan", precio:200})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7c1d6bf3875389d119e7") }
+db.articulos.insertOne({codigo:3,nombre:"caja", precio:300})
+{ acknowledged: true,
+  insertedId: ObjectId("626d7c266bf3875389d119e8") }
+
+db.articulos.find()
+{ _id: ObjectId("626d7c116bf3875389d119e6"),
+  codigo: 1,
+  nombre: 'tomate',
+  precio: 100 }
+{ _id: ObjectId("626d7c1d6bf3875389d119e7"),
+  codigo: 2,
+  nombre: 'banan',
+  precio: 200 }
+{ _id: ObjectId("626d7c266bf3875389d119e8"),
+  codigo: 3,
+  nombre: 'caja',
+  precio: 300 }
+
+db.articulos.find({codigo:3})
+{ _id: ObjectId("626d7c266bf3875389d119e8"),
+  codigo: 3,
+  nombre: 'caja',
+  precio: 300 }
+
+db.articulos.remove({codigo:3})
+{ acknowledged: true, deletedCount: 1 }

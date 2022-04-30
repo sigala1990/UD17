@@ -1,0 +1,33 @@
+use UD17act5
+'switched to db UD17act5'
+
+db.createCollection("DESPACHOS")
+{ ok: 1 }
+db.createCollection("DIRECTORES")
+{ ok: 1 }
+
+db.DESPACHOS.insertOne({numero:1,capacidad:2000})
+{ acknowledged: true,
+  insertedId: ObjectId("626d801a6bf3875389d119ea") }
+db.DESPACHOS.insertOne({numero:2,capacidad:4000})
+{ acknowledged: true,
+  insertedId: ObjectId("626d80216bf3875389d119eb") }
+
+db.DIRECTORES.insertOne({DNI:123456,nomApels:"geres", DNIJefe:"",Despacho:null})
+{ acknowledged: true,
+  insertedId: ObjectId("626d80986bf3875389d119ec") }
+db.DIRECTORES.insertOne({DNI:654321,nomApels:"Leo", DNIJefe:"",Despacho:null})
+{ acknowledged: true,
+  insertedId: ObjectId("626d80d26bf3875389d119ed") }
+
+db.DIRECTORES.find()
+{ _id: ObjectId("626d80986bf3875389d119ec"),
+  DNI: 123456,
+  nomApels: 'geres',
+  DNIJefe: '',
+  Despacho: null }
+{ _id: ObjectId("626d80d26bf3875389d119ed"),
+  DNI: 654321,
+  nomApels: 'Leo',
+  DNIJefe: '',
+  Despacho: null }

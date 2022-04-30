@@ -1,0 +1,41 @@
+use UD17act9
+'switched to db UD17act9'
+
+db.createCollection("cientificos")
+{ ok: 1 }
+db.createCollection("asignado_a")
+{ ok: 1 }
+db.createCollection("proyecto")
+{ ok: 1 }
+
+db.cientificos.insertOne({dni:123456,nomApels:"pepe"})
+{ acknowledged: true,
+  insertedId: ObjectId("626d84a06bf3875389d119ee") }
+db.cientificos.insertOne({dni:645321,nomApels:"jose"})
+{ acknowledged: true,
+  insertedId: ObjectId("626d84aa6bf3875389d119ef") }
+
+db.proyecto.insertOne({id:111,nombre:"josefa",horas:2})
+{ acknowledged: true,
+  insertedId: ObjectId("626d84f26bf3875389d119f0") }
+db.proyecto.insertOne({id:222,nombre:"perico",horas:6})
+{ acknowledged: true,
+  insertedId: ObjectId("626d85016bf3875389d119f1") }
+
+db.proyecto.find()
+{ _id: ObjectId("626d84f26bf3875389d119f0"),
+  id: 111,
+  nombre: 'josefa',
+  horas: 2 }
+{ _id: ObjectId("626d85016bf3875389d119f1"),
+  id: 222,
+  nombre: 'perico',
+  horas: 6 }
+
+db.cientificos.find()
+{ _id: ObjectId("626d84a06bf3875389d119ee"),
+  dni: 123456,
+  nomApels: 'pepe' }
+{ _id: ObjectId("626d84aa6bf3875389d119ef"),
+  dni: 645321,
+  nomApels: 'jose' }
