@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6272e1ff5b3b44bbd63b65ff"
+  },
+  "codigo": "A1",
+  "nombre": "spiderCerdo",
+  "calificacionEdad": 12
+},{
+  "_id": {
+    "$oid": "6272e2175b3b44bbd63b6600"
+  },
+  "codigo": "A2",
+  "nombre": "InterEstellar",
+  "calificacionEdad": 15
+},{
+  "_id": {
+    "$oid": "6272e2525b3b44bbd63b6601"
+  },
+  "codigo": 1,
+  "nombre": "Ala Oeste"
+},{
+  "_id": {
+    "$oid": "6272e2585b3b44bbd63b6602"
+  },
+  "codigo": 2,
+  "nombre": "Ala Norte"
+}]

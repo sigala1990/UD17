@@ -1,0 +1,40 @@
+use UD17act3
+'switched to db UD17act3'
+
+db.createCollection("almacenes")
+{ ok: 1 }
+db.createCollection("cajas")
+{ ok: 1 }
+
+db.almacenes.insertOne({codigo:1,lugar:"sala1",capacidad:1000})
+{ acknowledged: true,
+  insertedId: ObjectId("6272df545b3b44bbd63b65fb") }
+db.almacenes.insertOne({codigo:2,lugar:"sala2",capacidad:1500})
+{ acknowledged: true,
+  insertedId: ObjectId("6272df5d5b3b44bbd63b65fc") }
+
+db.cajas.insertOne({numReferencia:"A10",contenido:"ratones",valor:333})
+{ acknowledged: true,
+  insertedId: ObjectId("6272dffe5b3b44bbd63b65fd") }
+db.cajas.insertOne({numReferencia:"A11",contenido:"monitores",valor:1585})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e00f5b3b44bbd63b65fe") }
+
+db.almacenes.find()
+{ _id: ObjectId("6272df545b3b44bbd63b65fb"),
+  codigo: 1,
+  lugar: 'sala1',
+  capacidad: 1000 }
+{ _id: ObjectId("6272df5d5b3b44bbd63b65fc"),
+  codigo: 2,
+  lugar: 'sala2',
+  capacidad: 1500 }
+
+{ _id: ObjectId("6272dffe5b3b44bbd63b65fd"),
+  numReferencia: 'A10',
+  contenido: 'ratones',
+  valor: 333 }
+{ _id: ObjectId("6272e00f5b3b44bbd63b65fe"),
+  numReferencia: 'A11',
+  contenido: 'monitores',
+  valor: 1585 }

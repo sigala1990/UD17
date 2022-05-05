@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6272df545b3b44bbd63b65fb"
+  },
+  "codigo": 1,
+  "lugar": "sala1",
+  "capacidad": 1000
+},{
+  "_id": {
+    "$oid": "6272df5d5b3b44bbd63b65fc"
+  },
+  "codigo": 2,
+  "lugar": "sala2",
+  "capacidad": 1500
+}]

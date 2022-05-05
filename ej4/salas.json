@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "6272e29f5b3b44bbd63b6603"
+  },
+  "codigo": 1,
+  "nombre": "Ala Oeste"
+},{
+  "_id": {
+    "$oid": "6272e2a95b3b44bbd63b6604"
+  },
+  "codigo": 2,
+  "nombre": "Ala Norte"
+}]

@@ -1,0 +1,57 @@
+use UD17act7
+'switched to db UD17act7'
+
+db.createCollection("cajeros")
+{ ok: 1 }
+db.createCollection("productos")
+{ ok: 1 }
+db.createCollection("venta")
+{ ok: 1 }
+db.createCollection("maquinas_registradoras")
+{ ok: 1 }
+
+db.cajeros.insertOne({codigo:1,nomApels:"Alberto"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e4025b3b44bbd63b6605") }
+db.cajeros.insertOne({codigo:2,nomApels:"Ana"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e40c5b3b44bbd63b6606") }
+db.cajeros.find()
+{ _id: ObjectId("6272e4025b3b44bbd63b6605"),
+  codigo: 1,
+  nomApels: 'Alberto' }
+{ _id: ObjectId("6272e40c5b3b44bbd63b6606"),
+  codigo: 2,
+  nomApels: 'Ana' }
+
+db.productos.insertOne({codigo:1, nombre:"Agua",precio:1.5})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e44d5b3b44bbd63b6607") }
+db.productos.insertOne({codigo:2, nombre:"Fanta",precio:2.5})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e4655b3b44bbd63b6608") }
+
+db.productos.find()
+{ _id: ObjectId("6272e44d5b3b44bbd63b6607"),
+  codigo: 1,
+  nombre: 'Agua',
+  precio: 1.5 }
+{ _id: ObjectId("6272e4655b3b44bbd63b6608"),
+  codigo: 2,
+  nombre: 'Fanta',
+  precio: 2.5 }
+
+db.maquinas_registradoras.insertOne({codigo:"00A", piso:20})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e5145b3b44bbd63b6609") }
+db.maquinas_registradoras.insertOne({codigo:"00B", piso:15})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e51d5b3b44bbd63b660a") }
+
+db.maquinas_registradoras.find()
+{ _id: ObjectId("6272e5145b3b44bbd63b6609"),
+  codigo: '00A',
+  piso: 20 }
+{ _id: ObjectId("6272e51d5b3b44bbd63b660a"),
+  codigo: '00B',
+  piso: 15 }

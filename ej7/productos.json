@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6272e44d5b3b44bbd63b6607"
+  },
+  "codigo": 1,
+  "nombre": "Agua",
+  "precio": 1.5
+},{
+  "_id": {
+    "$oid": "6272e4655b3b44bbd63b6608"
+  },
+  "codigo": 2,
+  "nombre": "Fanta",
+  "precio": 2.5
+}]

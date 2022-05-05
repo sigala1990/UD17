@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6272dffe5b3b44bbd63b65fd"
+  },
+  "numReferencia": "A10",
+  "contenido": "ratones",
+  "valor": 333
+},{
+  "_id": {
+    "$oid": "6272e00f5b3b44bbd63b65fe"
+  },
+  "numReferencia": "A11",
+  "contenido": "monitores",
+  "valor": 1585
+}]

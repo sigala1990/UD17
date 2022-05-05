@@ -1,0 +1,46 @@
+use UD17act4
+'switched to db UD17act4'
+
+db.createCollection("salas")
+{ ok: 1 }
+db.createCollection("peliculas")
+{ ok: 1 }
+
+db.peliculas.insertOne({codigo:"A1", nombre:"spiderCerdo",calificacionEdad:12})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e1ff5b3b44bbd63b65ff") }
+db.peliculas.insertOne({codigo:"A2", nombre:"InterEstellar",calificacionEdad:15})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e2175b3b44bbd63b6600") }
+
+db.salas.insertOne({codigo:1,nombre:"Ala Oeste"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e2525b3b44bbd63b6601") }
+db.salas.insertOne({codigo:2,nombre:"Ala Norte"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e2585b3b44bbd63b6602") }
+
+db.peliculas.find()
+{ _id: ObjectId("6272e1ff5b3b44bbd63b65ff"),
+  codigo: 'A1',
+  nombre: 'spiderCerdo',
+  calificacionEdad: 12 }
+{ _id: ObjectId("6272e2175b3b44bbd63b6600"),
+  codigo: 'A2',
+  nombre: 'InterEstellar',
+  calificacionEdad: 15 }
+
+db.salas.insertOne({codigo:1,nombre:"Ala Oeste"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e29f5b3b44bbd63b6603") }
+db.salas.insertOne({codigo:2,nombre:"Ala Norte"})
+{ acknowledged: true,
+  insertedId: ObjectId("6272e2a95b3b44bbd63b6604") }
+
+db.salas.find()
+{ _id: ObjectId("6272e29f5b3b44bbd63b6603"),
+  codigo: 1,
+  nombre: 'Ala Oeste' }
+{ _id: ObjectId("6272e2a95b3b44bbd63b6604"),
+  codigo: 2,
+  nombre: 'Ala Norte' }
